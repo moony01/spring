@@ -15,8 +15,8 @@
 	 -->
 	 
 	 <!-- sample04 -->
-	 <!-- <bean id="calcAdd" class="sample04.CalcAdd"></bean> -->
-	 <!-- <bean id="calcMul" class="sample04.CalcMul"></bean> -->
+	 <bean id="calcAdd" class="sample04.CalcAdd"></bean>
+	 <bean id="calcMul" class="sample04.CalcMul"></bean>
 </beans>
 
 
