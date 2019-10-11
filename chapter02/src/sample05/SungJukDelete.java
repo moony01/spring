@@ -1,29 +1,45 @@
 package sample05;
 
+import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
+import lombok.Setter;
+
+@Setter
 public class SungJukDelete implements SungJuk {
+	private List<SungJukDTO> list;
 
 	@Override
 	public void execute() {
+		System.out.println();
 		Scanner scan = new Scanner(System.in);
-		System.out.println("삭제하고자 하는 이름 입력");
+		System.out.print("삭제할 이름을 입력하세요 : ");
 		String name = scan.next();
+		
 		int sw=0;
-		
-		for(int i=0;i<HelloSpring.list.size();i++) {
-			if(HelloSpring.list.get(i).getName().equals(name)) {
-				HelloSpring.list.remove(i);
-				sw++;
+		Iterator<SungJukDTO> it = list.iterator();
+		while(it.hasNext()) {
+			if(it.next().getName().equals(name)) {
+				it.remove();
+				sw=1;
 			}
-		}
+		}//for
 		
-		if(sw==0) {
-			System.out.println("입력하신 이름이 존재하지 않습니다.");
-		}else {
-			System.out.println("삭제 완료");
-		}
-		
+		if(sw==0) 
+			System.out.println("찾고자 하는 이름이 없습니다");
+		else
+			System.out.println(name+"님의 데이터를 삭제하였습니다");
+
 	}
-	
+
 }
+
+
+
+
+
+
+
+
+

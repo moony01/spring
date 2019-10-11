@@ -1,26 +1,22 @@
 package sample05;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class SungJukOutput implements SungJuk {
+import lombok.Setter;
 
+@Setter
+public class SungJukOutput implements SungJuk {
+	private List<SungJukDTO> list;
+	
 	@Override
 	public void execute() {
-		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		SungJukDTO sungJukDTO = (SungJukDTO)context.getBean("sungJukDTO");
-		
-		System.out.println("이름\t국어\t영어\t수학\t총점\t평균");
-		for(int i=0; i<HelloSpring.list.size(); i++) {
-			   System.out.println( HelloSpring.list.get(i).getName()
-					   +"\t"+HelloSpring.list.get(i).getKor()
-					   +"\t"+HelloSpring.list.get(i).getEng()
-					   +"\t"+HelloSpring.list.get(i).getMath() 
-					   +"\t"+HelloSpring.list.get(i).getTot()
-					   +"\t"+HelloSpring.list.get(i).getAvg() 
-					   );
-		}
-		
+		System.out.println();
+		for(SungJukDTO sungJukDTO : list) {
+			System.out.println(sungJukDTO);
+		}//for
 	}
 
 }
