@@ -16,6 +16,17 @@
 		<property name="qty" value="3" />
 	</bean>
 	
+	<!-- sample02 -->
+	<bean id="calcAdd" class="sample02.CalcAdd">
+		<constructor-arg value="25"/>
+		<constructor-arg value="36"/>
+	</bean>
+	
+	<bean id="calcMul" class="sample02.CalcMul">
+		<property name="x" value="25"/>
+		<property name="y" value="36"/>
+	</bean>
+	
 	<!-- sample03 -->
 	<!-- <bean id="sungJukDTO" class="sample03.SungJukDTO">
 		<property name="name" value="홍길동"/>
