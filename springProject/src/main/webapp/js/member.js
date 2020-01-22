@@ -170,16 +170,19 @@ function checkLogin(){
 		document.loginForm.submit();
 }
 
-function checkModify(){
-	if(document.modifyForm.name.value=="")
-		alert("이름을 입력하세요");
-	else if(document.modifyForm.pwd.value=="")
-		alert("비밀번호를 입력하세요");
-	else if(document.modifyForm.pwd.value != document.modifyForm.repwd.value)
-		alert("비밀번호가 맞지 않습니다")
-	else
-		document.modifyForm.submit();
-}
+$('#checkModify').on("click", function(){
+	if($('input[name=name]').val()==''){
+		$('#nameDiv').text('이름을 입력해주세요.');
+	} else if($('input[name=id]').val()==''){
+		$('#idDiv').text('아이디를 입력해주세요.');
+	} else if($('input[name=pwd]').val()==''){
+		$('#pwdDiv').text('비밀번호를 입력해주세요.')
+	} else if($('input[name=pwd]').val() != $('#repwd').val()){
+		$('#repwdDiv').text('비밀번호를 재 확인해주세요.');
+	} else if($('input[name=gender]').val()){
+		
+	}
+});
 
 
 

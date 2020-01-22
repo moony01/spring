@@ -94,6 +94,17 @@ public class MemberController {
 		mav.setViewName("jsonView");
 		return mav;
 	}
+	
+	@RequestMapping(value="modifyForm", method=RequestMethod.GET)
+	public String modifyForm(Model model) {
+		model.addAttribute("display", "/member/modifyForm.jsp");
+		return "/main/index";
+	}
+	
+	
+	
+	
+	
 }
 
 
