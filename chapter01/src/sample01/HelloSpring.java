@@ -3,7 +3,7 @@ package sample01;
 public class HelloSpring {
 
 	public static void main(String[] args) {
-		MessageBean messageBean = new MessageBean(); //1:1°ü°è, °áÇÕµµ100%
+		MessageBean messageBean = new MessageBean(); //1:1ê´€ê³„, ê²°í•¨ë„ 100%
 		messageBean.sayHello("Spring");
 	}
 }
